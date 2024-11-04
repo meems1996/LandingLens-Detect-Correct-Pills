@@ -7,32 +7,12 @@ Overview of the repository
 ## Overview
 This is an example of using LandingLens. A quick guide to how to set it up and build a fast project to get to see how it works. 
 
-### Use Case and Goal
-It's important to identify the use case and the goal of the project before we begin and invest the time and resources to train a model. 
-
-For this example, the use case for this project is both for fun (to test LandingLens) and to also automate a task. 
-
-The fun part of this project is identifying the different types of pills. In the pharmaceutical field this would have an actual advantage. Making sure to automate the task of identifying the correct pills. In this example, the pills are already sorted by their type and are easy to identify with a human eye pretty fast. So this is the fun part of the project. 
-
-The second part of the project is to automate a task. Counting the pills. The use case here is making sure to know how many are left and when to ask for a refill. This allows the person to know when they need to get a refill for their prescription so they don't run out of medication. 
-
-### Images for the Dataset
-_Garbage in, garbage out!_
-
-Using fewer but high quality images. 
-
-### Managing Classes
-
-## Use Case 
-Sometimes I forget how many pills I have left and when I need to ask for a refill. Usually I have to count them by hand. If the pills are just a few it's not difficult, but if I want to plan a long vacation and see when I will need a renewal and if they won't last, counting them by hand is cumbersome. 
-
-Using LandingLens you can create a simple detector in no time to count how many you have left. Knowing how many I take per day I created a simple code to let me know when I will need a refill. Most refills can be done same day, but it's good to add a day or two buffer if something goes wrong or if the pharmacy for some reason can't fulfill the request the same day. 
-
 ## Goal of this repository
 
 The goal of this repository is to give an easy to understand and simple example of using LandingLens to gather a set of images, train a model on the dataset of images, and use the API with the trained model on a new image to see how well it was trained. 
 
-This repository uses the Object Detection project type. Object Detection is used to identify multiple objects in an image with bounding boxes. With Object DEtection project types its important to draw precise and tight boxes around the objects of interest, like the pills in my examples. 
+This repository uses the Object Detection project type. __Object Detection is used to identify multiple objects in an image with bounding boxes.__ 
+With Object DEtection project types its important to draw precise and tight boxes around the objects of interest, like the pills in my examples. 
 
 It's important for the model to realize that the background is not important to the detection, so I am excluding as much of the background round each pill as I can. This is because the model will look at every pixel inside the bounding box (the box you draw around the object) and it will consider each and every pixel to be important. 
 
